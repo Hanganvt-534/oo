@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Nhập mật khẩu yêu thương</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hãy nhập điều bí mật 🥰</h1>
+  <input type="text" id="inputText" placeholder="Nhập gì đó..." />
+  <br>
+  <button onclick="checkInput()">Gửi</button>
+  <p class="error" id="errorMsg"></p>
+
+  <script>
+    function checkInput() {
+      const input = document.getElementById("inputText").value.trim();
+      const correctPhrase = "tớ yêu em bé";
+
+      if (input === correctPhrase) {
+        window.location.href = "next.html";
+      } else {
+        document.getElementById("errorMsg").textContent = "Sai rồi nhen 😝. Thử lại đi!";
+      }
+    }
+  </script>
+
+</body>
+</html>
